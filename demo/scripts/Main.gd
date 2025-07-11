@@ -106,7 +106,7 @@ func _on_read_pressed() -> void:
 # On send button pressed
 func _on_send_pressed() -> void:
 	var peripheral : BLEPeripheral = _ble_adapter.get_peripheral(_peripheral.text)
-	if peripheral.write_request_string_data(_service.text, _characteristic.text, _data.text):
+	if peripheral.write_command(_service.text, _characteristic.text, _data.text.to_ascii()):
 		_print_peripheral(peripheral, "Write", _data.text)
 
 
@@ -165,7 +165,8 @@ func _on_ble_adapter_peripheral_indicated(peripheral : BLEPeripheral, payload : 
 
 # On peripheral notify
 func _on_ble_adapter_peripheral_notified(peripheral : BLEPeripheral, payload : PoolByteArray) -> void:
-	_print_peripheral(peripheral, "Notify", payload.get_string_from_utf8())
+	print(payload)
+	_print_peripheral(peripheral, "Notify", payload.get_string_from_ascii())
 
 
 # On peripheral connected

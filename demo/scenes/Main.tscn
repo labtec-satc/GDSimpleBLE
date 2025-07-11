@@ -134,7 +134,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+text = "d4:36:39:c4:71:6a"
 placeholder_text = "Peripheral"
 
 [node name="Service" type="LineEdit" parent="Controls/Connection"]
@@ -144,7 +144,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+text = "0000ffe0-0000-1000-8000-00805f9b34fb"
 placeholder_text = "Service"
 
 [node name="Characteristic" type="LineEdit" parent="Controls/Connection"]
@@ -154,7 +154,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "6E400004-B5A3-F393-E0A9-E50E24DCCA9E"
+text = "0000ffe1-0000-1000-8000-00805f9b34fb"
 placeholder_text = "Characteristic"
 
 [node name="Interactions" type="HBoxContainer" parent="Controls"]
@@ -202,6 +202,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
+text = "B101RAI000007D"
 placeholder_text = "Data to send"
 
 [node name="BLEAdapter" type="Node" parent="."]
